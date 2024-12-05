@@ -1,0 +1,192 @@
+/* Buttons */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--border-radius-md);
+    font-weight: 600;
+    transition: var(--transition-normal);
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: var(--primary-color);
+    color: var(--background-color);
+}
+
+.btn-outline {
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+/* Cards */
+.card {
+    background: var(--surface-color);
+    border-radius: var(--border-radius-lg);
+    padding: 1.5rem;
+    border: 1px solid rgba(var(--primary-rgb), 0.1);
+    transition: var(--transition-normal);
+}
+
+.card-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.card-glass {
+    background: rgba(var(--surface-rgb), 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+/* Badges */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.badge-primary {
+    background: rgba(var(--primary-rgb), 0.1);
+    color: var(--primary-color);
+}
+
+/* Icons */
+.icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-sm { 
+    width: 1rem;
+    height: 1rem;
+}
+
+.icon-lg {
+    width: 2rem;
+    height: 2rem;
+}
+
+/* Progress Bars */
+.progress {
+    width: 100%;
+    height: 0.5rem;
+    background: rgba(var(--primary-rgb), 0.1);
+    border-radius: 9999px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    background: var(--primary-color);
+    border-radius: 9999px;
+    transition: width var(--transition-normal);
+}
+
+/* Tooltips */
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip:hover::before {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0.5rem 1rem;
+    background: var(--surface-color);
+    color: var(--text-primary);
+    border-radius: var(--border-radius-md);
+    font-size: 0.875rem;
+    white-space: nowrap;
+    z-index: var(--z-tooltip);
+    box-shadow: var(--shadow-lg);
+}
+
+/* Alerts */
+.alert {
+    padding: 1rem;
+    border-radius: var(--border-radius-md);
+    margin-bottom: 1rem;
+    border-left: 4px solid transparent;
+}
+
+.alert-success {
+    background: rgba(34, 197, 94, 0.1);
+    border-color: rgb(34, 197, 94);
+    color: rgb(34, 197, 94);
+}
+
+.alert-error {
+    background: rgba(239, 68, 68, 0.1);
+    border-color: rgb(239, 68, 68);
+    color: rgb(239, 68, 68);
+}
+
+/* Form Elements */
+.input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background: rgba(var(--surface-rgb), 0.8);
+    border: 1px solid rgba(var(--primary-rgb), 0.2);
+    border-radius: var(--border-radius-md);
+    color: var(--text-primary);
+    transition: var(--transition-normal);
+}
+
+.input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(var(--primary-rgb), 0.2);
+}
+
+/* Dividers */
+.divider {
+    width: 100%;
+    height: 1px;
+    background: rgba(var(--primary-rgb), 0.1);
+    margin: 1.5rem 0;
+}
+
+.divider-vertical {
+    width: 1px;
+    height: 100%;
+    background: rgba(var(--primary-rgb), 0.1);
+    margin: 0 1.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .btn {
+        padding: 0.625rem 1.25rem;
+    }
+    
+    .card {
+        padding: 1.25rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .btn {
+        width: 100%;
+    }
+    
+    .alert {
+        padding: 0.75rem;
+    }
+}

@@ -1,0 +1,89 @@
+/* Theme Configuration */
+:root {
+    /* Colors */
+    --primary-rgb: 103, 232, 249;
+    --surface-rgb: 30, 41, 59;
+    --background-rgb: 15, 23, 42;
+    --text-rgb: 248, 250, 252;
+    
+    /* Derived Colors */
+    --primary-color: rgb(var(--primary-rgb));
+    --surface-color: rgb(var(--surface-rgb));
+    --background-color: rgb(var(--background-rgb));
+    --text-primary: rgb(var(--text-rgb));
+    --text-secondary: rgba(var(--text-rgb), 0.7);
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(
+        135deg,
+        rgb(var(--primary-rgb)) 0%,
+        rgba(var(--primary-rgb), 0.7) 100%
+    );
+    --gradient-surface: linear-gradient(
+        135deg,
+        rgb(var(--surface-rgb)) 0%,
+        rgba(var(--surface-rgb), 0.9) 100%
+    );
+    
+    /* Shadows */
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+    --shadow-primary: 0 0 20px rgba(var(--primary-rgb), 0.3);
+    
+    /* Typography */
+    --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+    --font-mono: 'Fira Code', monospace;
+    --font-size-base: 16px;
+    --line-height-base: 1.5;
+    
+    /* Spacing */
+    --spacing-unit: 0.25rem;
+    --spacing-xs: calc(var(--spacing-unit) * 2);  /* 0.5rem */
+    --spacing-sm: calc(var(--spacing-unit) * 3);  /* 0.75rem */
+    --spacing-md: calc(var(--spacing-unit) * 4);  /* 1rem */
+    --spacing-lg: calc(var(--spacing-unit) * 6);  /* 1.5rem */
+    --spacing-xl: calc(var(--spacing-unit) * 8);  /* 2rem */
+    
+    /* Layout */
+    --max-width: 1400px;
+    --header-height: 70px;
+    --border-radius-sm: 4px;
+    --border-radius-md: 8px;
+    --border-radius-lg: 16px;
+    
+    /* Transitions */
+    --transition-fast: 150ms ease;
+    --transition-normal: 300ms ease;
+    --transition-slow: 500ms ease;
+    
+    /* Z-index Layers */
+    --z-negative: -1;
+    --z-normal: 1;
+    --z-tooltip: 10;
+    --z-fixed: 100;
+    --z-modal: 1000;
+}
+
+/* Light Theme Colors */
+[data-theme="light"] {
+    --primary-rgb: 14, 165, 233;
+    --surface-rgb: 241, 245, 249;
+    --background-rgb: 248, 250, 252;
+    --text-rgb: 15, 23, 42;
+}
+
+/* System Preference Dark Theme */
+@media (prefers-color-scheme: dark) {
+    :root {
+        color-scheme: dark;
+    }
+}
+
+/* High Contrast Theme */
+[data-theme="high-contrast"] {
+    --primary-rgb: 255, 255, 0;
+    --surface-rgb: 0, 0, 0;
+    --background-rgb: 0, 0, 0;
+    --text-rgb: 255, 255, 255;
+}
